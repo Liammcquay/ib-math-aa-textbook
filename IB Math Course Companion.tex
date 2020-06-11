@@ -52,6 +52,7 @@
 \newcommand*{\I}{\mathbb{I}}
 \newcommand*{\R}{\mathbb{R}}
 \newcommand*{\C}{\mathbb{C}}
+\newcommand*{\e}{\textrm{e}}
 \linespread{1.5}
 
 \renewcommand{\qedsymbol}{$\blacksquare$}
@@ -176,7 +177,7 @@
 	Any key points (formulas, equations, identities or equivalent) which need to be displayed for clarity shall be displayed like so:\\
 	
 	\begin{kp}[Euler's identity]
-		$$e^{\im \pi} + 1 = 0$$
+		$$\e^{\im \pi} + 1 = 0$$
 	\end{kp}
 
 	\subsection*{Worked Examples}
@@ -318,7 +319,7 @@
 
 	\paragraph{}
 	This chapter recaps some information on symbols, numbers and approximations which you may or may not be familiar with.
-	You should also be aware of the constants $\pi$ and $e$ and be able to find and use them on your calculator. This chapter
+	You should also be aware of the constants $\pi$ and $\e$ and be able to find and use them on your calculator. This chapter
 	also looks at counting principles for HL students.
 	
 	\subsection{Symbols}
@@ -625,7 +626,7 @@
 			\hline
 			$\pi$ & $3.141592654$\\
 			\hline
-			$e$ & $2.718281828$\\
+			$\e$ & $2.718281828$\\
 			\hline
 		\end{longtable}
 	\end{kp}
@@ -837,7 +838,7 @@
 	\begin{multicols}{2}
 		\begin{enumerate}[label=\textbf{(\alph*)}]
 			\item $4.55666$ to 2 d.p.
-			\item $e$ to 5 d.p.
+			\item $\e$ to 5 d.p.
 			\item $\dfrac{13}{17}$ to 3 d.p.
 			\item $\pi$ to 1 s.f.
 			\item $\sqrt{135}$ to 4 s.f.
@@ -869,8 +870,8 @@
 			\item $\sqrt{2}$ as an ``approximation'' of $1.41421$
 			\item $2.8$ as an approximation of $\sqrt{8}$
 			\item $\sqrt{11}$ as an approximation of $\sqrt{12}$
-			\item $e$ as an approximation of $\pi$
-			\item $\pi$ as an approximation of $e$
+			\item $\e$ as an approximation of $\pi$
+			\item $\pi$ as an approximation of $\e$
 		\end{enumerate}
 	\end{multicols}
 	
@@ -2023,12 +2024,12 @@
 			\hline
 		\end{longtable}
 		
-		As $n$ is increased, $A$ is indeed getting closer to the constant $e$. This is actually a \textbf{definition} of $e$. More
+		As $n$ is increased, $A$ is indeed getting closer to the constant $\e$. This is actually a \textbf{definition} of $\e$. More
 		formally:
 		
-		$$e = \lim_{n \to \infty} \left(1+\dfrac{1}{n}\right)^n$$
+		$$\e = \lim_{n \to \infty} \left(1+\dfrac{1}{n}\right)^n$$
 		
-		We shall see other definitions of $e$ later in the course.		
+		We shall see other definitions of $\e$ later in the course.		
 	\end{fr}
 	
 	\subsubsection*{Word Problems}
@@ -3271,7 +3272,7 @@
 	\log_a(a^x) = x$.
 	
 	\paragraph{}
-	We will come across the constant $e$ often. This section will introduce the usefulness of $e$ (to some extent).
+	We will come across the constant $\e$ often. This section will introduce the usefulness of $\e$ (to some extent).
 	
 	\paragraph{}
 	An \textit{exponent} is the part of a number which denotes the power some number is raised by. For the expression $a^n$, we
@@ -3391,32 +3392,32 @@
 	Notice that no such value $x$ in $\R$ gives $a^x \leqslant 0$ for any value of $a$ in $\R$. $a^x$ will always be positive.
 
 	\paragraph{}
-	It is common to use the base $e$ for a generic exponential function (i.e. $f(x) = e^x$). $e$ is a very special
+	It is common to use the base $\e$ for a generic exponential function (i.e. $f(x) = \e^x$). $\e$ is a very special
 	number in mathematics; probably the most important constant. As for why that is the case, later chapters will shed more light
-	on this. However, you will be working with $e^x$ very frequently in the course. Note that $e > 1$, so the shape of $e^x$
+	on this. However, you will be working with $\e^x$ very frequently in the course. Note that $\e > 1$, so the shape of $\e^x$
 	can be easily deduced using the facts from above.\\
 
-	\begin{fr}[Expressing \boldmath $e^x$ as a power series]
-		While values such as $2^3$ and $5^6$ are intuitive to evaluate, the same can't be said for $e^x$. This is especially
-		difficult since $e$ is irrational.\\
+	\begin{fr}[Expressing \boldmath $\e^x$ as a power series]
+		While values such as $2^3$ and $5^6$ are intuitive to evaluate, the same can't be said for $\e^x$. This is especially
+		difficult since $\e$ is irrational.\\
 	
-		We need to find a way to obtain approximations of $e^x$ in terms of $x$. Luckily, there are ways of doing so. For instance,
-		we know that $\displaystyle \lim_{n \to \infty} \left(1+\dfrac{1}{n}\right)^n = e$, so larger values of $n$ will mean closer rational
-		approximations to $e$, which we can take to the power of some $x$. However, this is very tedious to do by hand.\\
+		We need to find a way to obtain approximations of $\e^x$ in terms of $x$. Luckily, there are ways of doing so. For instance,
+		we know that $\displaystyle \lim_{n \to \infty} \left(1+\dfrac{1}{n}\right)^n = \e$, so larger values of $n$ will mean closer rational
+		approximations to $\e$, which we can take to the power of some $x$. However, this is very tedious to do by hand.\\
 		
-		An easier way to find an approximation for $e^x$ in terms of $x$ is to perform a \textit{binomial expansion} on the limit
-		definition of $e^x$ (which we will prove later on in the course):
+		An easier way to find an approximation for $\e^x$ in terms of $x$ is to perform a \textit{binomial expansion} on the limit
+		definition of $\e^x$ (which we will prove later on in the course):
 		
-		$$e^x = \lim_{n \to \infty} \left(1+\dfrac{x}{n}\right)^n$$
+		$$\e^x = \lim_{n \to \infty} \left(1+\dfrac{x}{n}\right)^n$$
 		
 		\hfill
 		
-		Notice that for $x=1$, we obtain $e^1 = e$, as per the definition of $e$. Additionally, $x=0$ yields $e^0 = 1$, which also makes
+		Notice that for $x=1$, we obtain $\e^1 = \e$, as per the definition of $\e$. Additionally, $x=0$ yields $\e^0 = 1$, which also makes
 		sense.\\
 		
 		If we expand this expression using the binomial theorem:
 		
-		$$e^x = \lim_{n \to \infty} 1 + {n \choose 1} \dfrac{x}{n} + {n \choose 2} \dfrac{x^2}{n^2} + {n \choose 3} \dfrac{x^3}{n^3} + ...$$
+		$$\e^x = \lim_{n \to \infty} 1 + {n \choose 1} \dfrac{x}{n} + {n \choose 2} \dfrac{x^2}{n^2} + {n \choose 3} \dfrac{x^3}{n^3} + ...$$
 		
 		$$= \lim_{n \to \infty} 1 + \dfrac{n}{n} x + \dfrac{n(n-1)}{n^2} \dfrac{x^2}{2!} + \dfrac{n(n-1)(n-2)}{n^3} \dfrac{x^3}{3!} + ...$$
 		
@@ -3426,9 +3427,9 @@
 		
 		\hfill
 		
-		We have expressed $e^x$ as an infinite sum of powers of $x$. Note that this is \textbf{not} a polynomial; a polynomial must have a 
+		We have expressed $\e^x$ as an infinite sum of powers of $x$. Note that this is \textbf{not} a polynomial; a polynomial must have a 
 		finite degree. Instead, this is called a \textbf{power series}. By choosing a good-enough $k$ to stop our terms 
-		at, we can approximate $e^x$ quite well. For larger or smaller (negative) values of $x$, you can see that the approximation becomes 
+		at, we can approximate $\e^x$ quite well. For larger or smaller (negative) values of $x$, you can see that the approximation becomes 
 		less accurate.
 	\end{fr}
 	
@@ -3471,7 +3472,7 @@
 	\end{ex}
 	
 	\paragraph{}
-	Since $e^x$ is used a lot, $\ln$ denotes logarithms to base $e$ for brevity (i.e. $\log_e(x) = \ln(x)$). It is also common to
+	Since $\e^x$ is used a lot, $\ln$ denotes logarithms to base $\e$ for brevity (i.e. $\log_{\e}(x) = \ln(x)$). It is also common to
 	write $\log_a(x)$ as $\dfrac{\ln(x)}{\ln(a)}$ (using the change of base rule) for consistency. Here is a plot of $y = \ln(x)$ 
 	on a graph:\\
 	
@@ -3504,25 +3505,25 @@
 	
 	\stepcounter{excount}
 	\begin{ex}
-		Solve the equation $e^{2x} - 4e^x - 1 = 0$ for $x \in \R$, giving your answer(s) in exact form.
+		Solve the equation $\e^{2x} - 4\e^x - 1 = 0$ for $x \in \R$, giving your answer(s) in exact form.
 		
 		\hfill
 		\tcbline
 		\hfill
 		
-		Notice that $e^{2x} = (e^x)^2$ and substitute $y = e^x$ to obtain $y^2 - 4y - 1 = 0$. By substituting a common expression
+		Notice that $\e^{2x} = (\e^x)^2$ and substitute $y = \e^x$ to obtain $y^2 - 4y - 1 = 0$. By substituting a common expression
 		for a variable, we have converted the equation to a recognizable form; in this case, a quadratic. We just have to make sure our
 		final answer is $x$ and not $y$.\\
 		
 		$y^2 - 4y - 1 = (y-2)^2 - 1 - 4 = 0$\\
 		$(y-2)^2 = 5 \implies y-2 = \pm \sqrt{5} \implies y = 2 \pm \sqrt{5}$\\
 		
-		Then back-substitute $y = e^x$:\\
-		$e^x = 2 \pm \sqrt{5}$ so $e^x = 2+\sqrt{5}$ or $2 - \sqrt{5}$.\\
+		Then back-substitute $y = \e^x$:\\
+		$\e^x = 2 \pm \sqrt{5}$ so $\e^x = 2+\sqrt{5}$ or $2 - \sqrt{5}$.\\
 		
-		However, notice that $2-\sqrt{5} < 2 - \sqrt{4} = 2 - 2 = 0$ and $e^x$ can't be negative for any real value $x$.\\
+		However, notice that $2-\sqrt{5} < 2 - \sqrt{4} = 2 - 2 = 0$ and $\e^x$ can't be negative for any real value $x$.\\
 		
-		Hence, $e^x = 2 + \sqrt{5}$ is the only solution, so $x = \ln(2+\sqrt{5})$
+		Hence, $\e^x = 2 + \sqrt{5}$ is the only solution, so $x = \ln(2+\sqrt{5})$
 	\end{ex}
 	
 	\paragraph{}
@@ -3553,10 +3554,10 @@
 	\begin{multicols}{2}
 		\begin{enumerate}[label=\textbf{(\alph*)}]
 			\item $3^x = x^3$ 
-			\item $e^x = x^2 + 3x + 1$
-			\item $\ln(x) + e^x = 3^{\ln(x)}$
-			\item $\dfrac{e^x - e^{-x}}{2} = x^5-x^4+x^3-x^2+x+\dfrac{1}{10}$
-			\item $\sqrt[x]{x} = x^{ex}$
+			\item $\e^x = x^2 + 3x + 1$
+			\item $\ln(x) + \e^x = 3^{\ln(x)}$
+			\item $\dfrac{\e^x - \e^{-x}}{2} = x^5-x^4+x^3-x^2+x+\dfrac{1}{10}$
+			\item $\sqrt[x]{x} = x^{\e x}$
 			\item $\sqrt{x^x} = x!$ (you may find Desmos particularly useful for this one)
 		\end{enumerate}
 	\end{multicols}
@@ -3566,7 +3567,7 @@
 	\subsubsection*{Word Problems}
 	
 	\paragraph{}
-	\inlinebox{gray!30}{\textbf{3}} We have seen that $\displaystyle \lim_{n \to \infty} \left(1+\dfrac{x}{n}\right)^n = e^x$.\\
+	\inlinebox{gray!30}{\textbf{3}} We have seen that $\displaystyle \lim_{n \to \infty} \left(1+\dfrac{x}{n}\right)^n = \e^x$.\\
 	Prove that $\displaystyle \lim_{h \to 0} \dfrac{x^h - 1}{h} = \ln(x)$
 	
 	\hfill
@@ -3580,6 +3581,7 @@
 	\paragraph{}
 	Let $f : X \to Y$. This notation says ``let $f$ be a function which maps the set $X$ to the set $Y$''. What this means is $f$ takes any value
 	$x$ in the set $X$ and \textit{maps} it to \textbf{exactly one} value $y$ in $Y$. We write $f(x) = y$ to mean $f$ maps $x$ to $y$. 
+	Alternatively, we can write $x \mapsto f(x)$ (for example, $f : x \mapsto x^2$ is the same as writing $f(x) = x^2$).
 	This tells us the first condition which a function must satisfy: it must
 	map each value in $A$ to \textbf{only one} value in $B$. This may seem intuitive enough, but it's important to be aware of this. The reason
 	for why this is so is because it's natural to define an equation $y = f(x)$ for graphing. This means each value of $x$ on the $x$-axis is mapped
@@ -3636,7 +3638,7 @@
 		Write down the domain and range of the following functions:
 		
 		\begin{itemize}
-			\item $f(x) = e^x$ with codomain $\R$
+			\item $f(x) = \e^x$ with codomain $\R$
 			\item $g(x) = \ln(x)$ with codomain $\R$
 			\item $h(x) = \sqrt[3]{x}$ with codomain $\R$
 		\end{itemize}
@@ -3645,10 +3647,10 @@
 		\hfill
 		
 		\begin{itemize}
-			\item $f(x) = e^x$ can map any $x \in \R$ to $\R$, but $e^x > 0$ for all $x \in \R$. So the domain is $\R$ and the range
+			\item $f(x) = \e^x$ can map any $x \in \R$ to $\R$, but $\e^x > 0$ for all $x \in \R$. So the domain is $\R$ and the range
 			is $\R^+$.
 			\item $g(x) = \ln(x)$ maps to $\R$ only when $x > 0$, so the domain is $\R$. It's clear that $\ln(\R^+) = \R$, since we can 
-			choose any $y \in \R$ and use $x = e^y \in \R^+$ to give $\ln(x) = y$ so the range is $\R$.
+			choose any $y \in \R$ and use $x = \e^y \in \R^+$ to give $\ln(x) = y$ so the range is $\R$.
 			\item $h(x) = \sqrt[3]{x}$ is defined on all of $\R$ and maps any value in $\R$ to a value in $\R$. Moreover, given any $y \in \R$, we
 			can choose $x = y^3$ to give $h(x) = y$. So the domain and range are both $\R$.
 		\end{itemize}
@@ -3656,7 +3658,7 @@
 	
 	\paragraph{}
 	The preceding exercise specified that the codomain for each provided function. This is because if the codomain was larger, the corresponding
-	domain and range would be different. For example if we chose $\C$ to be the codomain for $f(x) = e^x$ and $g(x) = \ln(x)$, the range of
+	domain and range would be different. For example if we chose $\C$ to be the codomain for $f(x) = \e^x$ and $g(x) = \ln(x)$, the range of
 	$f$ and the domain of $g$ would both be $\C \setminus \{0\}$ (which includes $\R \setminus \{0\}$). It's not necessary to make this 
 	specification given the context of functions mapping reals to reals, but one should nonetheless be aware of this fact.
 	
@@ -3677,7 +3679,7 @@
 	Here are some examples for $f : \R \to \R$:
 	
 	\begin{itemize}
-		\item $f(x) = e^x$ is injective but not surjective
+		\item $f(x) = \e^x$ is injective but not surjective
 		\item $f(x) = x^3 + 2x^2$ is surjective but not injective
 		\item $f(x) = x^3 + 2x$ is both injective and surjective
 		\item $f(x) = x^2$ is neither injective nor surjective
@@ -3702,9 +3704,9 @@
 	\end{kp}
 	
 	\paragraph{}
-	Define $f : \R \to \R$ by $f(x) = e^x$ and $g : \R \to \R$ by $x^2$. We have $f(\R) = \R^+$ and $g(\R) = \R_{\geqslant 0}$, both contained
+	Define $f : \R \to \R$ by $f(x) = \e^x$ and $g : \R \to \R$ by $x^2$. We have $f(\R) = \R^+$ and $g(\R) = \R_{\geqslant 0}$, both contained
 	in the domain of $f$ and $g$. Thus we can define $h = g \circ f : \R \to \R$ and $k = f \circ g : \R \to \R$. We have that
-	$h(x) = e^{2x}$ and $k(x) = e^{x^2}$. They clearly aren't the same function, which shows $\circ$ isn't necessarily a commutative operation.
+	$h(x) = \e^{2x}$ and $k(x) = \e^{x^2}$. They clearly aren't the same function, which shows $\circ$ isn't necessarily a commutative operation.
 	That is, $f \circ g = g \circ f$ doesn't always hold.\\
 	
 	\stepcounter{excount}
@@ -3765,13 +3767,13 @@
 	$\R_{\geqslant 0}$ however, $g$ \textit{would be} a left-inverse, with $g \circ f = I_{\R_{\geqslant 0}}$.
 	
 	\paragraph{}
-	Now consider $f : \R \to \R$ and $g : \R^+ \to R$ defined by $f(x) = e^x$ and $g(x) = \ln(x)$. It's apparent that $f \circ g : \R^+ \to \R$
-	is $e^{\ln(x)} = x$, which means $f \circ g = I_{\R^+}$. You probably have noticed that the codomain
+	Now consider $f : \R \to \R$ and $g : \R^+ \to R$ defined by $f(x) = \e^x$ and $g(x) = \ln(x)$. It's apparent that $f \circ g : \R^+ \to \R$
+	is $\e^{\ln(x)} = x$, which means $f \circ g = I_{\R^+}$. You probably have noticed that the codomain
 	of $f$ isn't $\R^+$ though. However, we know that $f(\R) = \R^+ \subseteq \R$, so we can always restrict the codomain of $f$ to $\R^+$
 	if we want. So by making $f : \R \to \R^+$, we can satisfy the inverse requirement and say that $g$ is a right inverse of $f$.
 	We typically aren't picky about this, though. As long as the range of $f$ is the domain of $g$, we can say that $f : \R \to \R$
 	has a right inverse $g : \R^+ \to \R$.
-	We can also see that $(g \circ f)(x) = \ln(e^x) = x$, so $g \circ f = I_{\R}$. Therefore, $g$ is also a left inverse of $f$. When a function
+	We can also see that $(g \circ f)(x) = \ln(\e^x) = x$, so $g \circ f = I_{\R}$. Therefore, $g$ is also a left inverse of $f$. When a function
 	has a left inverse \textbf{and} a right inverse, we say the function is \textbf{invertible}.\\
 	
 	\begin{kp}[Invertible functions]
@@ -3780,10 +3782,11 @@
 	\end{kp}
 	
 	\paragraph{}
-	So for $f : \R \to \R^+$ given by $f(x) = e^x$, we have $f^{-1}(x) = \ln(x)$ is the inverse (which can be applied to either the left side
+	So for $f : \R \to \R^+$ given by $f(x) = \e^x$, we have $f^{-1}(x) = \ln(x)$ is the inverse (which can be applied to either the left side
 	or the right side of $f$ via composition). We also have another property:\\
 	
 	\begin{pf}
+		\label{fun-prop-ex}
 		\begin{theorem*}
 			Let $f : X \to Y$ be a function. Then:
 			\begin{itemize}
@@ -3830,6 +3833,11 @@
 	\end{ex}
 	
 	\paragraph{}
+	Sometimes it's very difficult to find the inverse of a function; even if it's obviously bijective. Try finding the inverse of 
+	$f(x) = x\e^x$ for $f : \R^+ \to \R^+$. Not so easy, huh? If you're interested in what the inverse is, search up the
+	\textit{Lambert $W$ function}.
+	
+	\paragraph{}
 	We finish this section with function parity. While this is technically an HL concept, it's not a difficult concept and is worth knowing even as
 	an SL student.\\
 	
@@ -3844,7 +3852,7 @@
 	\paragraph{}
 	This gives us a notion of symmetry in a function. An example of an odd function is $f(x) = x$. This isn't a very interesting one though.
 	Another one is $f(x) = x^3$. An example of an even function is $f(x) = x^2$ or $f(x) = |x|$. Note that not all functions have these properties. 
-	For example, $f(x) = e^x$ isn't odd nor even, neither is $f(x) = (x-2)^2$.\\
+	For example, $f(x) = \e^x$ isn't odd nor even, neither is $f(x) = (x-2)^2$.\\
 	
 	\stepcounter{excount}
 	\begin{ex}
@@ -3867,14 +3875,55 @@
 		\end{itemize}
 	\end{ex}
 	
+	\hfill
+	
+	\begin{fr}[Groups]
+		A \textbf{group} $(G, \star)$ is a set $G$ equipped with a binary operation $\star$ on $G$ such that the following are satisfied:
+		\begin{itemize}
+			\item $g \star h \in G$ for all $g \in G$ (\textbf{closure under operation})
+			\item $(g \star h) \star k = g \star (h \star k)$ for all $g,h,k \in G$ (\textbf{associativity})
+			\item there exists $e \in G$ such that $e \star g = g \star e$ for all $g \in G$ (\textbf{identity})
+			\item for all $g \in G$, there exists $h \in G$ such that $g \star h = h \star g = e$ (\textbf{invertibility})
+		\end{itemize}
+		
+		Moreover if we have:
+		\begin{itemize}
+			\item $g \star h = h \star g$ for all $g,h \in G$ (\textbf{commutativity})
+		\end{itemize}
+		
+		then we call $(G, \star)$ a \textbf{commutative group} (or \textbf{abelian group}). Some examples of abelian groups are $(\Z, +)$ and
+		$(\Q \setminus \{0\}, \cdot)$. An example of a non-abelian group would be $(\mathcal{F}_I(X, Y), \circ)$ for $\mathcal{F}_I(X, Y)$ 
+		the set of all invertible functions $f : X \to Y$ under composition. $(\Z, -)$ is \textbf{not} a group (why?).\\
+		
+		From groups, we can obtain some very powerful abstractions and generalize a lot of algebra that we're already familiar with.
+		Groups will be covered more formally later in the book as an \textbf{FC} chapter.
+	\end{fr}
+	
 	\subsubsection*{Drill Exercises}
 	
 	\paragraph{}
-	\inlinebox{green}{\textbf{1}} Coming soon
+	\inlinebox{green}{\textbf{1}} State whether each of the functions below are injective and/or surjective.
+	find its inverse.
 	
 	\begin{multicols}{2}
 		\begin{enumerate}[label=\textbf{(\alph*)}]
-			\item ?
+			\item $f : \R \to \R^+ : x \mapsto \e^{x^2}$
+			\item $f : \R \to \R : x \mapsto x^3 + 3x^2 + 2x + 1$
+			\item $f : \R \to \R : x \mapsto x^3 + x^2 + x + 1$
+			\item $f : \R \to \R : x \mapsto \ln(x\e^x)$
+		\end{enumerate}
+	\end{multicols}
+	
+	\newpage	
+	
+	\inlinebox{green}{\textbf{2}} Find inverses for the following functions, stating an appropriate domain for each.
+	
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\textbf{(\alph*)}]
+			\item $f : \R \to \R: x \mapsto \e^{x^3}$
+			\item $f : \R^- \to \R : x \mapsto \ln(x^2)$
+			\item $f : [0, \infty) \to \R : x \mapsto x^4 + 6x^2 + 5$
+			\item $f : \R \to \R : x \mapsto \e^{\e^x}$
 		\end{enumerate}
 	\end{multicols}
 	
@@ -3883,7 +3932,31 @@
 	\subsubsection*{Word Problems}
 	
 	\paragraph{}
-	\inlinebox{gray!30}{\textbf{?}} Coming soon 
+	\inlinebox{green}{\textbf{3}} 
+	Sketch graphs of $f(x) = \e^x$ ($x \in \R$) and $g(x) = \sqrt{x}$ ($x \geqslant 0$) along with their inverses. What do you notice about
+	the symmetry of $f$ with $f^{-1}$ and $g$ with $g^{-1}$? What does this say about the identity function $I_\R$? 
+	
+	\paragraph{}
+	\inlinebox{green}{\textbf{4}} 
+	Prove the theorem on page \pageref*{fun-prop-ex}.
+	
+	\paragraph{}
+	\inlinebox{yellow}{\textbf{5}} 
+	Let $f : \R \to \R$. Prove that $f$ is \textbf{both} odd and even if and only if $f(x) = 0$.
+	
+	\paragraph{}
+	\inlinebox{yellow}{\textbf{6}} 
+	Let $X$ and $Y$ be sets. Prove that there is an injection $f : X \to Y$ if and only if there is a surjection $g : Y \to X$.
+	
+	\paragraph{}
+	\inlinebox{yellow}{\textbf{7}} 
+	Prove that the composition of two injective functions is injective. Prove that the composition of two surjective functions is surjective.
+	Hence if $f$ and $g$ are bijective, what can you say about $(f \circ g)^{-1}$?
+	
+	\paragraph{}
+	\inlinebox{red}{\textbf{8}} 
+	Prove that every function $f : \R \to \R$ can be decomposed as a sum of an odd function and an even function. Prove
+	that such a decomposition is unique.
 	
 	
 	\newpage 
