@@ -1,6 +1,5 @@
 \documentclass[12pt, a4paper, titlepage, twoside]{article}
 \usepackage[margin=1.2cm,inner=2.5cm,outer=1.5cm,bottom=2cm]{geometry}
-\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{bm}
@@ -113,6 +112,7 @@
 
 \setcounter{section}{-1}
 \setcounter{tocdepth}{2}
+\pgfplotsset{compat=1.11}
 
 \begin{document}
 	\begin{titlepage}
@@ -120,7 +120,7 @@
 
   	\begin{center}
   		{\Huge IB Mathematics Analysis and Approaches} \vskip 2cm
-  		{\Large Course Companion} \vskip 1cm
+  		{\Large A Formal Approach} \vskip 1cm
  	\end{center}
 
 	\vfill
@@ -143,16 +143,19 @@
 	\subsection*{Overview}
 
 	\paragraph{}
-	This course companion covers all of IB Mathematics Analysis and Approaches at both SL and HL. This 
-	is \textbf{not} your typical textbook. What most textbooks do is teach the content, provide exam tips, 		
-	worked examples, exercises and maybe a sample exam-style paper.
-	This book does all that, but also includes extra material outside the syllabus to enhance your learning (and provide further context for 	
+	This textbook covers all of IB Mathematics Analysis and Approaches at both SL and HL. This 
+	is \textbf{not} your typical textbook. Most textbooks will teach the content with many concrete examples and explain
+	things in quite a bit of detail. I deem some of this detail as unnecessary and as content which a student can figure out
+	for themself. This book with be more abstract and formal; it won't go through many examples and won't provide as many
+	trivial exercises as other textbooks do. 
+	The book also includes extra material outside the syllabus to enhance your learning (and provide further context for 	
 	syllabus content when needed). Extra content will be clearly indicated so you know what is and isn't in the syllabus. However, I highly 
 	recommend going through all the extra content anyway. That being said, this textbook is recommended to those who have a great
-	interest in mathematics and would like to learn more than just what the course teaches them.
+	interest in mathematics and would like to learn more than just what the course teaches them. If you find that your mathematics 
+	ability is quite weak (for example, level 5 or below), this may not be the textbook for you.
 
 	\paragraph{}
-	This book also approaches the content more formally than other textbooks. It will contain mathematical proofs for some of the 
+	As the title of the book says, it approaches the content formally. It will contain mathematical proofs for some of the 
 	major theorems to provide you both reasoning for what you learn as well as an idea of what formal proofs look like in University 
 	mathematics and beyond. From my personal experience learning mathematics, I found most textbooks were only somewhat helpful and 
 	didn't fully explain concepts the best way. I am aware of how most students understand mathematics and will do my best to present the 
@@ -243,7 +246,7 @@
 			
 			Thus $n$ can be expressed as $2k_2$ for some $k_2 \in \Z$.\\
 			
-			Now $m = 2k_1$ and $n = 2k_2$ and hence, $\sqrt{2} = \dfrac{2k_1}{2k_2}$, which is clearly reducible by cancelling
+			Now $m = 2k_1$ and $n = 2k_2$ and hence, $\sqrt{2} = \dfrac{2k_1}{2k_2}$, which is clearly reducible by canceling
 			the $2$s from the numerator and denominator, implying $\dfrac{m}{n}$ is reducible.\\
 			
 			This is a contradiction to the definition of rational numbers, as an irreducible fraction can't be found. Hence,
@@ -1865,7 +1868,7 @@
 	with a recurring group of decimal digits (i.e. $x = 0.\overline{d_1 d_2 d_3 ... d_n}$) is rational.
 	
 	\paragraph{}
-	\inlinebox{yellow}{\textbf{5}} Use question $4$ to convert the following decimal numbers to fractional form:
+	\inlinebox{yellow}{\textbf{5}} Use \textbf{question 4} to convert the following decimal numbers to fractional form:
 	
 	\begin{multicols}{2}
 		\begin{enumerate}[label=\textbf{(\alph*)}]
@@ -2273,7 +2276,6 @@
 			\node at (5.5,-2.5) {$\Delta y_2$};
 			\node at (-0.75, 0.4) {$O$};
 			\node at (5.5, 0.5) {$M$};
-			
 		\end{tikzpicture}
 			
 		Where $m_1 = \Delta y_1$ and $m_2 = -\Delta y_2$.\\
@@ -2964,11 +2966,11 @@
 			\item $(x+1)^4$
 			\item $(x+1)^5$
 			\item $(x+1)^6$
-			\item $(x+1)^10$
+			\item $(x+1)^{10}$
 			\item $(x^2+1)^5$
 			\item $(x^3 - 4)^6$
 			\item $\left(1 + \dfrac{1}{x}\right)^6$
-			\item $(4 - \dfrac{2}{5x^2})^9$
+			\item $\left(4 - \dfrac{2}{5x^2}\right)^9$
 		\end{enumerate}	
 	\end{multicols}
 
@@ -3012,13 +3014,14 @@
 		\tcbline
 		
 		\begin{proof}
-			This proof uses the \textit{Euclidean Division Theorem}, which will not be proven here (as it isn't useful in this course).
+			This proof uses the \textit{Euclidean Division Theorem}, which will not be proven here (as it isn't directly used in this course).
 			You can find the proof in \textbf{Appendix A} on page \pageref*{apA:euc-div}.\\
 			
 			From this algorithm, there are polynomials $Q(x)$ and $R(x)$ for which $P(x) = (x-r)Q(x) + R(x)$, where
-			$\text{deg}(R) < \text{deg}(Q)$\\
+			$R(x)$ is the remainder when $P(x)$ is divided by $x-r$ and $\text{deg}(R) < \text{deg}(g) = 1$. This means $\deg(R) = 0$ and thus 
+			$R(x)$ is constant.\\
 			
-			Since $P(r)$ is constant, $R(x)$ is constant (as $P(r) = R(x)$). This is the remainder when $P(x)$ is divided by $x-r$.
+			We have then that $P(r) = R(r) = R(x)$, so $P(r)$ is the remainder when $P(x)$ is divided by $x-r$.
 		\end{proof}
 	\end{pf} 
 	
@@ -3319,7 +3322,7 @@
 					{\scriptsize $y = x^0$};
 				\end{axis}
 			\end{tikzpicture}
-			\end{figure}
+		\end{figure}
 
 	\paragraph{}
 	It can be seen that two different functions approach two distinct values of $0^0$. Hence, $0^0$ is undefined (or indeterminate).
@@ -3366,7 +3369,7 @@
 	The last four points refer to the function behavior when $x$ approaches infinity (positive or negative) depending on the
 	value of $a$. If you have read the section on geometric sequences already, you should be familiar with this type of behavior.
 	Of course if $a = 1$, $f(x) = 1$ for all values of $x$.\\
-	
+
 	\begin{figure}[H]
 			\centering
 			\begin{tikzpicture}[scale=1.3]
@@ -3436,7 +3439,7 @@
 	\paragraph{}
 	As stated, a logarithm function is an inverse for a corresponding exponential function. The general form is $\log_a(x)$ (read as
 	``log to base $a$ of $x$''), where $a$ is the base of its corresponding exponential function. It is such that if $y = a^x$, then 
-	$x = \log_a(y)$. In other words, $\log$ can be used to obtain the exponential part of an expression. That being said, 
+	$x = \log_a(y)$. In other words, $\log$ can be used to obtain the exponential part of an expression of the form $a^x$. That being said, 
 	$a^{\log_a(x)} = x$ and similarly $\log_a(a^x) = x$.
 	
 	\paragraph{}
@@ -3582,7 +3585,7 @@
 	Let $f : X \to Y$. This notation says ``let $f$ be a function which maps the set $X$ to the set $Y$''. What this means is $f$ takes any value
 	$x$ in the set $X$ and \textit{maps} it to \textbf{exactly one} value $y$ in $Y$. We write $f(x) = y$ to mean $f$ maps $x$ to $y$. 
 	Alternatively, we can write $x \mapsto f(x)$ (for example, $f : x \mapsto x^2$ is the same as writing $f(x) = x^2$).
-	This tells us the first condition which a function must satisfy: it must
+	This notation $f : X \to Y$ tells us the first condition which a function must satisfy: it must
 	map each value in $A$ to \textbf{only one} value in $B$. This may seem intuitive enough, but it's important to be aware of this. The reason
 	for why this is so is because it's natural to define an equation $y = f(x)$ for graphing. This means each value of $x$ on the $x$-axis is mapped
 	to a corresponding value $y = f(x)$ on the $y$-axis. But such equations may not be functions. 
@@ -3624,13 +3627,12 @@
 	The one which stands out is the \textbf{range}. The range describes the \textit{subset} of the codomain of values which $f$ is able to
 	reach with the given domain $X$. For example, we can define $f : \R \to \R$ by $f(x) = x^2$. It's clear that the domain and codomain of $f$ is
 	$\R$, but the range of $f$ is \textbf{not} $\R$ because no negative values of $\R$ can be reached by $f$ given that its domain is $\R$.
-	We say that the range is $f(\R) = \R^+ \cup \{0\} \subseteq \R$ or equivalently $f(\R) = \{ y \in \R \; \vert \; y \geqslant 0 \}$. Note that
-	the codomain of a function can be chosen to be any superset of the range of the function (or the range itself, of course). For the rest of
-	the chapter, we will denote $\R_{\geqslant 0} = \R^+ \cup \{0\}$ and $\R_{\leqslant 0} = \R^- \cup \{0\}$.
+	We say that the range is $f(\R) = [0,\infty) \subseteq \R$ or equivalently $f(\R) = \{ y \in \R \; \vert \; y \geqslant 0 \}$. Note that
+	the codomain of a function can be chosen to be any superset of the range of the function (or the range itself, of course).
 	
 	\paragraph{}
 	Another point to make is a function must map \textbf{all} values in its domain to some value in the codomain. For example, we can't define
-	$g : \R \to \R$ by $g(x) = \sqrt{x}$, because $g(x) \not\in \R$ for any $x < 0$. We would need to write $g : \R_{\geqslant 0}  \to \R$, then it
+	$g : \R \to \R$ by $g(x) = \sqrt{x}$, because $g(x) \not\in \R$ for any $x < 0$. We would need to write $g : [0,\infty) \to \R$, then it
 	would make sense.\\
 	
 	\stepcounter{excount}
@@ -3704,7 +3706,7 @@
 	\end{kp}
 	
 	\paragraph{}
-	Define $f : \R \to \R$ by $f(x) = \e^x$ and $g : \R \to \R$ by $x^2$. We have $f(\R) = \R^+$ and $g(\R) = \R_{\geqslant 0}$, both contained
+	Define $f : \R \to \R$ by $f(x) = \e^x$ and $g : \R \to \R$ by $x^2$. We have $f(\R) = \R^+$ and $g(\R) = [0,\infty)$, both contained
 	in the domain of $f$ and $g$. Thus we can define $h = g \circ f : \R \to \R$ and $k = f \circ g : \R \to \R$. We have that
 	$h(x) = \e^{2x}$ and $k(x) = \e^{x^2}$. They clearly aren't the same function, which shows $\circ$ isn't necessarily a commutative operation.
 	That is, $f \circ g = g \circ f$ doesn't always hold.\\
@@ -3729,17 +3731,17 @@
 	
 	\paragraph{}
 	We know that function composition isn't commutative.
-	Define $f(x) = x^2$ and $g(x) = \sqrt{x}$. We have that $f : \R \to \R$ with $f(\R) = \R_{\geqslant 0} $ and $g : \R_{\geqslant 0} \to \R$
-	with $g(\R_{\geqslant 0} ) = \R_{\geqslant 0}$. We can see that $f(\R)$ is exactly the domain of $g$, which means
-	the function $h : \R \to \R_{\geqslant 0}$ given by $h = g \circ f$ is well-defined. Indeed, we have $h(x) = \sqrt{x^2} = |x|$.
-	Conversely we observe that $g(\R_{\geqslant 0})$ is contained in the domain of $f$, but isn't exactly the domain itself.
-	This is fine when it comes to defining $k : \R_{\geqslant 0} \to \R_{\geqslant 0}$ by $k(x) = (\sqrt{x})^2 = x$. Although $h$ and $k$ have
+	Define $f(x) = x^2$ and $g(x) = \sqrt{x}$. We have that $f : \R \to \R$ with $f(\R) = [0,\infty)$ and $g : [0,\infty) \to \R$
+	with $g([0,\infty) ) = [0,\infty)$. We can see that $f(\R)$ is exactly the domain of $g$, which means
+	the function $h : \R \to [0,\infty)$ given by $h = g \circ f$ is well-defined. Indeed, we have $h(x) = \sqrt{x^2} = |x|$.
+	Conversely we observe that $g([0,\infty))$ is contained in the domain of $f$, but isn't exactly the domain itself.
+	This is fine when it comes to defining $k : [0,\infty) \to [0,\infty)$ by $k(x) = (\sqrt{x})^2 = x$. Although $h$ and $k$ have
 	the same range, it's clear that they aren't the same function (they have different domains). But you've probably have noticed that there's 
 	something special with the particular functions chosen.
 	
 	\paragraph{}
 	If we're given $x^2 \in \R$, we can get back $x$ by taking the square root of $x^2$, but this may yield two possible results. For example
-	if $x^2 = 4$, we have $x = 2$ or $x = -2$ as possible values. We can, however, find $x$ given $\sqrt{x} \in \R_{\geqslant 0}$ by
+	if $x^2 = 4$, we have $x = 2$ or $x = -2$ as possible values. We can, however, find $x$ given $\sqrt{x} \in [0,\infty)$ by
 	squaring the root. That is if $\sqrt{x} = 4$, we have $x = 16$; and this is the only value of $x$ for which $\sqrt{x} = 4$.
 	This brings us to the concept of \textbf{identity} and \textbf{inverse} of functions.\\
 	
@@ -3750,7 +3752,7 @@
 	
 	\paragraph{}
 	It can be seen that an identity depends on the set on which its defined. For instance if we take $f(x) = x^2$ and $g(x) = \sqrt{x}$
-	with $f : \R \to \R_{\geqslant 0}$ and $g : \R_{\geqslant 0} \to \R$, it's clear that $f \circ g = I_{R_{\geqslant 0}}$ (note that we've changed
+	with $f : \R \to [0,\infty)$ and $g : [0,\infty) \to \R$, it's clear that $f \circ g = I_{[0,\infty)}$ (note that we've changed
 	the codomain of $f$). We say that $f$ is a \textbf{left inverse} of $g$ which this happens, or equivalently that $g$ is a \textbf{right inverse} 
 	of $f$.\\
 	
@@ -3764,7 +3766,7 @@
 	\paragraph{}
 	For the same $f$ and $g$, we can see that $g$ isn't a left inverse of $f$. That is, $g \circ f \neq I_{\R}$; it's easy to see because we've
 	established that $(g \circ f)(x) = |x| \neq x$ on $\R$. Thus, $f(x) = x^2$ is not left-invertible. If we restrict the domain of $f$ to
-	$\R_{\geqslant 0}$ however, $g$ \textit{would be} a left-inverse, with $g \circ f = I_{\R_{\geqslant 0}}$.
+	$[0,\infty)$ however, $g$ \textit{would be} a left-inverse, with $g \circ f = I_{[0,\infty)}$.
 	
 	\paragraph{}
 	Now consider $f : \R \to \R$ and $g : \R^+ \to R$ defined by $f(x) = \e^x$ and $g(x) = \ln(x)$. It's apparent that $f \circ g : \R^+ \to \R$
@@ -3934,7 +3936,7 @@
 	\paragraph{}
 	\inlinebox{green}{\textbf{3}} 
 	Sketch graphs of $f(x) = \e^x$ ($x \in \R$) and $g(x) = \sqrt{x}$ ($x \geqslant 0$) along with their inverses. What do you notice about
-	the symmetry of $f$ with $f^{-1}$ and $g$ with $g^{-1}$? What does this say about the identity function $I_\R$? 
+	the symmetry of $f$ with $f^{-1}$ and $g$ with $g^{-1}$? What does this say about the identity functions? 
 	
 	\paragraph{}
 	\inlinebox{green}{\textbf{4}} 
@@ -3955,12 +3957,267 @@
 	
 	\paragraph{}
 	\inlinebox{red}{\textbf{8}} 
-	Prove that every function $f : \R \to \R$ can be decomposed as a sum of an odd function and an even function. Prove
-	that such a decomposition is unique.
+	Prove that every function $f : \R \to \R$ can be decomposed as a sum of an odd function and an even function (i.e. $f(x) = f_o(x) + f_e(x)$
+	where $f_o : \R \to \R$ is odd and $f_e : \R \to \R$ is even). Prove that such a decomposition is unique.
 	
+	\paragraph{}
+	\inlinebox{red}{\textbf{9}} 
+	Let $f(x) = \e^x$. Use \textbf{question 8} to find $f_o$ and $f_e$. \\ These are special functions: $f_o$ is called $\sinh$ (rhymes with 
+	``pinch'') and $f_e$ is called $\cosh$ (rhymes with ``posh''). We can write $\e^x = \sinh(x) + \cosh(x)$.
 	
 	\newpage 
 	
+	\subsection{Rational functions and asymptotes}
+	
+	\paragraph{}
+	This section looks at functions of the form $\frac{P(x)}{Q(x)}$ for polynomials $P$ and $Q$ with $Q$ non-zero ($Q$ may have zeros, 
+	but can't be the zero function itself). We call these \textbf{rational functions}. Note that any polynomial is itself a rational function 
+	by setting $P(x)$ to be the polynomial and $Q(x) = 1$. \\
+	
+	\begin{kp}[Rational function]
+		A rational function $R : D \to \R$ is a function of the form:
+		\[ R(x) = \dfrac{P(x)}{Q(x)} \]
+		
+		where $P$ and $Q$ are polynomials, $Q$ is non-zero (not the zero function) and $D \subseteq \R \setminus \{x_1, ..., x_n\}$ where 
+		$\{x_1, ..., x_n\}$ are all the roots of $Q$.
+	\end{kp}
+	
+	\paragraph{}
+	It's clear that such a function can't be defined on the roots of $Q$, as we can't divide by zero. We shall look at the behavior of rational
+	functions near such points. But first, we should look at some algebraic properties rational functions have:\\
+	
+	\begin{pf}
+		\begin{theorem*}
+			The set of rational functions is closed under addition, multiplication, and taking reciprocals (of non-zero values).
+		\end{theorem*}
+		
+		\tcbline
+		
+		\begin{proof}
+			Let $R(x) = \dfrac{P_1(x)}{Q_1(x)}$ and $S(x) = \dfrac{P_2(x)}{Q_2(x)}$ for polynomials $P_1, P_2, Q_1, Q_2$ with
+			$Q_1, Q_2$ non-zero. Then:
+			\[ R(x) + S(x) = \dfrac{P_1(x)}{Q_1(x)} + \dfrac{P_2(x)}{Q_2(x)} = \dfrac{P_1(x) \cdot Q_2(x)}{Q_1(x) \cdot Q_2(x)}
+			+ \dfrac{P_2(x) \cdot Q_1(x)}{Q_2(x) \cdot Q_1(x)} = \dfrac{P_1(x) Q_2(x) + P_2(x) Q_1(x)}{Q_1(x) Q_2(x)} \]
+			
+			Since polynomials are closed under addition and multiplication, we have that the numerator and denominator
+			of the last expression are both polynomials. Moreover, $Q_1(x) Q_2(x)$ is non-zero since $Q_1$ and $Q_2$ are
+			non-zero. Thus, we get another rational function.\\
+			
+			Next:
+			\[ R(x) \cdot S(x) = \dfrac{P_1(x)}{Q_1(x)} \cdot \dfrac{P_2(x)}{Q_2(x)} = \dfrac{P_1(x)P_2(x)}{Q_1(x) Q_2(x)}  \]
+			
+			Again since polynomials are closed under multiplication, we have that the numerator and denominator are once again
+			polynomials, with $Q_1(x) Q_2(x)$ non-zero. This, we get another rational function.\\
+			
+			Finally, suppose $P$ is non-zero. Then:
+			\[ \dfrac{1}{R(x)} = \dfrac{1}{\tfrac{P(x)}{Q(x)}} = \dfrac{Q(x)}{P(x)} \]
+			
+			which is a quotient of two polynomials (with non-zero denominator) and is thus a rational function.
+		\end{proof}
+	\end{pf}
+	
+	\paragraph{}
+	From these properties, we know that we can also subtract, divide (by non-zero values), and of course take integer powers (negative powers 
+	of non-zero values) of rational functions (why?). We now look at a special type of rational function:\\
+	
+	\begin{kp}[The reciprocal function]
+		The \textbf{reciprocal function} is defined on $\R \setminus \{0\}$ by:
+		\[ f(x) = \dfrac{1}{x} \]
+	\end{kp}
+	
+	\paragraph{}
+	A few things to note about this function are that right-composition with any other function yields the function's reciprocal.
+	That is, if $f$ is the reciprocal function, then $f \circ g = \frac{1}{g}$, the reciprocal of $g$. That being said, we observe that 
+	$(f \circ f)(x) = x$, the identity function. In this case, we have that $f$ is \textbf{self-invertible}.\\
+	
+	\begin{kp}
+		An invertible function $f$ is called \textbf{self-invertible} when $f^{-1} = f$
+	\end{kp}
+		
+	\paragraph{}
+	Some other examples of self-invertible functions are $x \mapsto x$ on $\R$ (the identity function) and $x \mapsto \frac{x}{x-1}$ on
+	$\R \setminus \{1\}$. 
+	
+	\paragraph{}
+	Now we are ready to do some analysis of rational functions. The IB only requires you to look at rational functions up to quadratic numerators
+	and denominators, so our subsequent examples will only use such rational functions. First we'll look at the case where the denominator is a 
+	linear function. 
+	
+	\paragraph{}
+	We know that a linear function always has exactly one real root. This tells us that there will only be one value of $x$ where the denominator
+	is zero. For $f(x) = \frac{P(x)}{ax+b}$ ($a \neq 0$, $P$ a polynomial), we have that $x = -\frac{b}{a}$ is the only point where $f$ is undefined. 
+	We call such a point a \textbf{singularity}. Here are some examples (with the same reciprocal):
+	
+	\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[scale=2, declare function={f(\x)=1/(3*\x+1);}, declare function={g(\x)=(4*\x-5)/(3*\x+1);}]
+		\begin{axis}[xmin=-5,xmax=5,
+							 ymin=-20,ymax=20,
+   							 grid=both,
+    						 grid style={line width=.1pt, draw=gray!10},
+    						 major grid style={line width=.2pt,draw=gray!50},
+    						 axis lines=middle,
+    						 minor tick num=5,
+     						 enlargelimits={abs=0.5},
+   							 axis line style={latex-latex},
+   							 ticklabel style={font=\tiny,fill=white},
+   							 xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+   							 ylabel style={at={(ticklabel* cs:1)},anchor=south west}]
+		\addplot[mark=none, red, thick, samples=100, domain=-5:-0.34, range=-20:20]{f(x)} node at (axis cs:-2,-5) 
+		{\scriptsize $y = \dfrac{1}{3x+1}$};
+		\addplot[mark=none, red, thick, samples=100, domain=-0.32:5, range=-20:20]{f(x)} node at (axis cs:-2,-5){};
+		\addplot[mark=none, green, thick, samples=100, domain=-5:-0.34, range=-20:20, unbounded coords=jump]{g(x)} node at (axis cs:-2,16) 
+		{\scriptsize $y = \dfrac{4x-5}{3x+1}$};
+		\addplot[mark=none, green, thick, samples=100, domain=-0.32:5, range=-20:20, unbounded coords=jump]{g(x)} node at (axis cs:2.5,16){};
+		\addplot[mark=none, blue, thick, samples=50, domain=-5:5]{4/3} node at (axis cs:3,5) {\scriptsize $y = \dfrac{4x+\tfrac{4}{3}}{3x+1}$};
+		\end{axis}
+	\end{tikzpicture}
+	\end{figure}
+	
+	\paragraph{}
+	Each graph exhibits interesting properties. We can see the behavior of the red and green ones at the point $x = -\frac{1}{3}$. The blue one, 
+	however, seems to be very different, even though the function is rational and has a non-zero denominator. Why is that so? Well this is because
+	we can write:
+	\[ \dfrac{4x+\tfrac{4}{3}}{3x+1} = \dfrac{4}{3} \cdot \dfrac{3x+1}{3x+1} \]
+	
+	\paragraph{}
+	and we are free to cancel out the two $3x+1$ terms, provided $x \neq -\frac{1}{3}$. This somewhat explains the graph's behavior at every
+	point; including the point $x = -\frac{1}{3}$ where it \textit{seems} to be defined. However, the function is still undefined at this point. 
+	Moreover, this point is still a singularity of the function. We call this type of singularity a \textbf{removable singularity}. Singularities of this
+	type, as the name suggests, can be ``removed'' by defining an appropriate value for them. In particular, the value to define must be done
+	so that the function ``behaves well'' around that point. So if $f$ represented the blue function, we can write:
+	\[ f(x) = \begin{cases} \frac{4x+\tfrac{4}{3}}{3x+1}, & x \neq -\frac{1}{3} \\ \frac{4}{3}, &  x = -\frac{1}{3} \end{cases} \]
+	
+	\paragraph{}
+	You might be thinking ``wait, but couldn't we just cancel out the $3x+1$ term and just define the function as $f(x) = \frac{4}{3}$?''
+	The answer is \textbf{yes}, we can do so, provided the situation allows for it. We must ask: ``can we \textbf{always} cancel such terms
+	out without worry? Does every removable singularity come from a cancelable term?'' For the first question, the answer is \textbf{yes}. Given
+	that there are two terms which can be canceled out, we are able to cancel them out and the resulting function will be nice(r) in the sense
+	that the singularity will have been removed. But for the second question, try answering it yourself by graphing:
+	\[ y = \dfrac{\e^{x-1} -1}{(x+1)(x-1)} \]
+	
+	\paragraph{}
+	If you've answered \textbf{no} to the second question after graphing the above, come back to this question after finishing calculus.
+	You may have noticed that I used the term ``behaves well'' when describing a removable singularity. This is for lack of a better term,
+	which can't be used this early in the course. If you're interested, search up \textit{complex analysis}.
+	
+	\paragraph{}
+	Now let's look at the red and green functions. There's nothing to cancel out in either of them. Let's first look at the red function,
+	$f(x) = \frac{1}{3x+1}$. We notice its behavior at $x = -\frac{1}{3}$; it goes to infinity in two directions (negative infinity as $x$ 
+	approaches it from the left and positive infinity from the right). Why is that so? Well we can make the observation that for $x < -\frac{1}{3}$,
+	we have $f(x) < 0$; similarly for $x > \frac{1}{3}$, we have $f(x) > 0$. Moreover for $x$ near $-\frac{1}{3}$, we are essentially dividing
+	1 by a term very close to zero, which yields either a very large positive value or a very ``large'' negative value (be careful here, because
+	just saying a ``very small'' value may imply values near zero; here we mean values which are large when ignoring the sign). We call this 
+	type of singularity a \textbf{pole}, and with it comes the line $x = -\frac{1}{3}$ which describes the line which the function is getting very 
+	close to but never reaches. This line is called an \textbf{asymptote}; in particular, a \textbf{vertical asymptote} (because the line is vertical).
+	
+	\paragraph{}
+	We can also observe that as $x$ approaches either positive or negative infinity, $f$ approaches zero. It's intuitive to see why this is the
+	case; as we divide $1$ by (positively or negatively) larger values, the result will be very ``small'' in the sense that it's near zero.
+	Here we have that as $x$ approaches either infinity, the function $f$ gets very close to the line $y=0$ (the $x$-axis) but never reaches it.
+	We call this line a \textbf{horizontal asymptote}.
+	
+	\paragraph{}
+	To mathematically state these facts about (what we call) \textit{asymptotic behavior}, we can write:
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item $\displaystyle \lim_{x \to -\frac{1}{3}^+} f(x) = +\infty$
+		\item $\displaystyle \lim_{x \to -\frac{1}{3}^-} f(x) = -\infty$
+		\item $\displaystyle \lim_{x \to +\infty} f(x) = 0$
+		\item $\displaystyle \lim_{x \to -\infty} f(x) = 0$
+	\end{itemize}
+	\end{multicols}
+	
+	\paragraph{}
+	This may take some explaining if you're not familiar with it (the \textbf{closed} interval $[-\infty, \infty]$ implies inclusion of 
+	infinities themselves as well):\\
+	
+	\begin{kp}[Limit notation]
+		If a real-valued function $f$ approaches a value $L_+ \in [-\infty, \infty]$
+		as $x$ approaches a value $a \in [-\infty, \infty]$ from the right side (positive side) and $f$ approaches a value $L_- \in [-\infty, \infty]$
+		as $x$ approaches $a$ from the left (negative side), then we write:
+		\[ \lim_{x \to a^+} f(x) = L_+ \]
+		\[ \lim_{x \to a^-} f(x) = L_- \]
+		
+		If $L_+ = L_-$, then we can set $L = L_+ = L_-$ and write:
+		\[ \lim_{x \to a} f(x) = L \]
+		
+		Note that if $a = \pm \infty$, we can omit the superscript $+$ or $-$ from the limit, as infinity can only be approached from one side.
+	\end{kp}
+	
+	\paragraph{}
+	We will come back to this limit notation in calculus and use it quite a bit.
+	Remember that the asymptote itself is the \textbf{line} which the function approaches, not the limit itself. We have:\\
+	
+	\begin{kp}[Asymptotes]
+		If $f$ is a real-valued function, $a, L \in (-\infty, \infty)$ and either or both of the following hold:
+		\begin{itemize}
+			\item $\displaystyle \lim_{x \to \infty} f(x) = L$ or $\displaystyle \lim_{x \to -\infty} f(x) = L$
+			\item $\displaystyle \lim_{x \to a^-} f(x) = \pm \infty$ or $\displaystyle \lim_{x \to a^+} f(x) = \pm \infty$
+		\end{itemize}
+		
+		Then:
+		\begin{itemize}
+			\item $y = L$ is a \textbf{horizontal asymptote} of $f$
+			\item $x = a$ is a \textbf{vertical asymptote} of $f$
+		\end{itemize}
+	\end{kp}
+	
+	\paragraph{}
+	Observe that we need $a$ and $L$ to be non-infinity for this to work; the line defined by $y = \infty$, for example, doesn't really make sense.
+	
+	\paragraph{}
+	Now, let's consider the green function, $g(x) = \frac{4x-5}{3x+1}$. This time, however, we shall determine the behavior and compute the 
+	asymptotes without just looking at the graph (we'll still use the graph as reference though). How can we compute limits? Well, we have
+	a way of getting \textit{vertical} asymptotes by finding singularities (particularly poles). Since no terms in $g$ can cancel out, we have
+	a pole at $x = -\frac{1}{3}$ (which makes the denominator zero). Thus, our (only) vertical asymptote is the line $x = -\frac{1}{3}$.
+	
+	\paragraph{}
+	As for the horizontal one, the graph shows that $g$ doesn't actually approach zero as $x \to \pm \infty$. It looks like it approaches the
+	blue line, but how can we show this? We need only use the following (very intuitive) fact:\\
+	
+	\begin{pf}
+		\begin{theorem*}
+			If $n \geqslant 1$ and $k \in \R$, then $\displaystyle \lim_{x \to \pm \infty} \dfrac{k}{x^n} = 0$
+		\end{theorem*}
+
+		\tcbline		
+		
+		\begin{proof}
+			This is clear when $k=0$, so we can assume $k \neq 0$. The proof below uses techniques which are beyond the scope 
+			of IB, but written here for those who are interested.\\
+			
+			Let $\varepsilon > 0$ and choose $x_0 = \sqrt[n]{\frac{|k|}{\varepsilon}}$. Let $x \in \R$ satisfy $x >x_0$. Then:
+			\[ |f(x) - 0| = |f(x)| = \left\vert \dfrac{|k|}{x^n} \right\vert = \dfrac{|k|}{|x|^n} < \dfrac{|k|}{|x_0|^n} = \dfrac{|k|}{\tfrac{|k|}
+			{\varepsilon}} = \varepsilon \]
+			
+			Which proves that $\displaystyle \lim_{x \to +\infty} \frac{k}{x^n} = 0$. Analogously, choose $x_0 = -\sqrt[n]{\frac{|k|}{\varepsilon}}$,
+			let $x \in \R$ satisfy $x < x_0$ and the exact same argument as above yields:
+			\[ |f(x) - 0| < \varepsilon \]
+			
+			once again, which proves $\displaystyle \lim_{x \to -\infty} \frac{k}{x^n} = 0$.
+		\end{proof}
+	\end{pf}
+	
+	\paragraph{}
+	This theorem gives us a tool to help use determine limits. Let's apply it to $g(x) = \frac{4x-5}{3x+1}$. First write:
+	\[ g(x) = \dfrac{4x-5}{3x+1} = \dfrac{\tfrac{1}{x}}{\tfrac{1}{x}} \cdot \dfrac{4x-5}{3x+1} = \dfrac{4-\tfrac{5}{x}}{3+\tfrac{1}{x}} \]
+	
+	\paragraph{}
+	We can do so because we are taking $x \to \pm \infty$, which is very far away from zero (thus we won't be dividing by zero in the limit
+	calculation). Then:
+	\[ \lim_{x \to \pm \infty} g(x) = \lim_{x \to \pm \infty} \dfrac{4-\tfrac{1}{x}}{3+\tfrac{1}{x}} = \dfrac{4-0}{3+0} = \dfrac{4}{3} \]
+	
+	\paragraph{}
+	This means our horizontal asymptote is $y = \frac{4}{3}$, which is exactly the equation of the blue line. You may have noticed that
+	even though we used the statement in the theorem, how do we know we can apply it the way we did? How do we know that the limit
+	of a quotient is the quotient of limits? We didn't prove anything about how we can use the limit operation; we can for sure and we will,
+	but doing so now would be a huge digression from the topic at hand. We shall wait for the calculus topic and prove all limit rules there.
+	
+	\paragraph{}
+	
+		
+\newpage
 	
 \section{Appendix A}
 
